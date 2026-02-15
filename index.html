@@ -93,10 +93,9 @@
   "contact": "573 079 017",
   "prices": [
     "1h [Szkoła podstawowa] - 40zł",
-    "1.5h (90 min) [Szkoła podstawowa] - 75zł",
+    "1.5h [Szkoła podstawowa] (90 min) 75zł",
     "1h [Szkoła ponadpodstawowa] - 70zł",
-    "1.5h (90 min) [Szkoła ponadpodstawowa] - 120zł",
-    "Omówienie całego arkusza z egzaminu ósmoklasisty - 110zł",
+    "1.5h [Szkoła ponadpodstawowa] (90 min) 120zł Omówienie całego arkusza z egzaminu ósmoklasisty - 110zł",
     "Wykonanie zadania domowego z opisowym wytłumaczeniem - 25zł (bez spotkania online)"
   ],
   "rules": [
@@ -104,8 +103,7 @@
     "Korepetycje odbywają sie na platformie Google Meets lub Discord",
     "Warunkiem koniecznym jest wysłanie jakiegokolwiek materiału z lekcji w szkole (najlepiej przykładowe zadania w zeszycie lub  zadania z zeszytu ćwiczeń) abym znał wymagania nauczyciela odnośnie tematu",
     "Płatność z góry [Blik]",
-    "Odwołanie zajęć min 12h przed",
-    "Jeśli szykujecie sie do poprawy sprawdzianu/kartkówki to bardzo mile widziane jest zdjecie pracy :)"
+    "Odwołanie zajęć min 12h przed"
   ],
   "about": "Cześć! Nazywam się Jakub. W 2025 roku skończyłem Technikum. Mój wynik z matury podstawowej z matematyki to 82%",
   "topics": {
@@ -123,6 +121,7 @@
       "jednostki i skala"
     ],
     "secondary": [
+      "dowody podzielności",
       "potęgi i pierwiastki",
       "przedziały liczbowe",
       "wartość bezwzględna",
@@ -185,7 +184,12 @@
 
     <div class="glass-card" id="card-price">
         <div class="section-header" onclick="toggleCard('card-price')">💰 Cennik</div>
-        <div class="section-content"><ul id="v-prices"></ul></div>
+        <div class="section-content">
+            <ul id="v-prices"></ul>
+            <p style="color: #ff7675; font-size: 0.8rem; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px;">
+                * Dni zaznaczone na kolor pomarańczowy w kalendarzu mają dostępne tylko godzinne korepetycje!
+            </p>
+        </div>
     </div>
     
     <div class="glass-card" id="card-rules">
@@ -204,6 +208,15 @@
         <div class="captcha-box" id="contact-result" style="display:none">
             <h3>📞 Zadzwoń:</h3>
             <a href="#" id="real-phone" style="font-size:1.5rem;color:var(--main);text-decoration:none;font-weight:bold"></a>
+            
+            <h3 style="color: #ff7675; font-size: 1.3rem; margin-top: 20px; margin-bottom: 10px; text-transform: uppercase; text-align: center;">
+                ZAPOZNAJ SIĘ Z WARUNKAMI KOREPETYCJI
+            </h3>
+
+            <p style="margin-top: 10px; color: var(--text-dim); font-size: 0.9rem; line-height: 1.5;">
+                Bardzo preferuję kontakt SMS.<br>
+                Nie gwarantuję natychmiastowej odpowiedzi na Messenger!
+            </p>
         </div>
     </div>
 
