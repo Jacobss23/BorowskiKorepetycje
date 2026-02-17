@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="icon" href="IMG_6932.JPEG">
     <title>Korepetycje</title>
     <style>
@@ -122,6 +121,21 @@
         }
         .day.partial:hover { transform: translateY(-2px); background: rgba(0, 210, 211, 0.3); box-shadow: 0 4px 12px rgba(0, 210, 211, 0.2); }
 
+        /* Badge Ostrzeżenia (NOWE) */
+        .warning-box {
+            background: rgba(255, 118, 117, 0.1);
+            border: 1px solid rgba(255, 118, 117, 0.3);
+            border-radius: 16px;
+            padding: 15px;
+            margin: 25px auto 15px;
+            max-width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            text-align: left;
+        }
+
         /* Captcha & Modal */
         .captcha-box { text-align: center; padding: 30px; }
         .captcha-input { 
@@ -182,16 +196,16 @@
   "desc": "Jakub Borowski",
   "contact": "573 079 017",
   "prices": [
-    "1h [Szkoła podstawowa] - 40zł",
+    "1h (90 min) [Szkoła podstawowa] - 40zł",
     "1.5h (90 min) [Szkoła podstawowa] (90 min) 55zł",
-    "1h [Szkoła ponadpodstawowa] - 70zł",
+    "1h (90 min) [Szkoła ponadpodstawowa] - 70zł",
     "1.5h (90 min) [Szkoła ponadpodstawowa]  - 100zł",
     "Omówienie całego arkusza z egzaminu ósmoklasisty z poprzednich lat - 110zł",
     "Wykonanie zadania domowego z opisowym wytłumaczeniem - 25zł (bez spotkania online)"
   ],
   "rules": [
     "KOREPETYCJE TYLKO ONLINE",
-    "Korepetycje odbywają sie na platformie Google Meets (<a href='https://support.google.com/meet/answer/9303069?hl=pl' target='_blank' style='font-weight:bold; text-decoration:underline;'>PORADNIK</a>) lub Discord",
+    "Korepetycje odbywają sie na platformie Google Meets (<a href='https://support.google.com/meet/answer/9303069?hl=en' target='_blank' style='font-weight:bold; text-decoration:underline;'>PORADNIK</a>) lub Discord",
     "Warunkiem koniecznym jest wysłanie jakiegokolwiek materiału z lekcji w szkole (najlepiej przykładowe zadania w zeszycie lub  zadania z zeszytu ćwiczeń) abym znał wymagania nauczyciela odnośnie tematu",
     "Płatność z góry [Blik]",
     "Szkoła podstawowa od klasy 4 do klasy 8",
@@ -244,6 +258,10 @@
     <div class="glass-card" style="display:inline-block; padding: 30px 60px;">
         <h1 id="v-subject">...</h1>
         <p id="v-desc" style="font-size: 1.2rem; margin-top: 10px;"></p>
+        
+        <button class="main-btn" onclick="document.getElementById('contact-section').scrollIntoView({behavior: 'smooth'})" style="margin-top: 20px; font-size: 1rem; padding: 15px 35px;">
+            Umów lekcję 👇
+        </button>
     </div>
 </header>
 
@@ -257,13 +275,16 @@
             </div>
             <div class="days-grid" id="calendar-grid"></div>
             
-            <div style="text-align: center; margin-top: 30px; margin-bottom: 15px;">
-                <p style="margin: 0; color: #ff7675; font-weight: 600; font-size: 0.95rem;">
-                    Korepetycje muszą być umówione minimum 48h przed planowanym terminem
-                </p>
-                <p style="margin: 6px 0 0 0; font-size: 0.8rem; color: var(--text-dim); opacity: 0.7;">
-                    Ale i tak proszę o kontakt, może uda nam się coś ustalić ;)
-                </p>
+            <div class="warning-box">
+                <div style="font-size: 1.8rem;">⏳</div>
+                <div>
+                    <p style="margin: 0; color: #ff7675; font-weight: 600; font-size: 0.95rem;">
+                        Wymagane umówienie min. 48h przed terminem
+                    </p>
+                    <p style="margin: 4px 0 0 0; font-size: 0.8rem; color: var(--text-dim); opacity: 0.8;">
+                        Napisz śmiało, może uda się coś ustalić ;)
+                    </p>
+                </div>
             </div>
 
             <div style="margin-top:20px; font-size:0.8rem; display:flex; gap:20px; justify-content: center; flex-wrap: wrap;">
@@ -314,7 +335,7 @@
         </div>
     </div>
 
-    <div class="glass-card">
+    <div class="glass-card" id="contact-section">
         <div class="captcha-box" id="captcha-container">
             <h3>📞 Kontakt</h3>
             <p style="margin-bottom: 15px;">Rozwiąż działanie, aby zobaczyć numer:</p>
@@ -338,6 +359,10 @@
                 Bardzo preferuję kontakt <strong>SMS</strong>.<br>
                 Nie gwarantuję natychmiastowej odpowiedzi na Messenger!
             </p>
+            
+            <a href="LINK_DO_TWOJEGO_DISCORDA" target="_blank" style="background: #5865F2; color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; display: inline-block; margin-top: 20px; font-weight: 600; font-size: 0.9rem;">
+                Dołącz na mój Discord 👾
+            </a>
         </div>
     </div>
 </div>
